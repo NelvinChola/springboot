@@ -1,0 +1,128 @@
+.side-nav-option {
+ width:  220px;
+    padding-bottom: 20px;
+ 
+  cursor: pointer;
+   
+}
+
+.buttons{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+    flex-direction: row;
+    
+   
+}
+
+
+.img-container{
+    text-align: center;
+    display: block;
+}
+.center {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 20%;
+    border: px solid lightgreen;
+    padding: inherit;
+}
+.center1 {
+    display: block;
+    margin-left:auto;
+    margin-right: auto;
+    width: 100%;
+    border: px solid lightgreen;
+    padding: inherit;
+}
+.center2{
+    padding-top: 150px; 
+    display: flex;
+    
+    margin-right: auto;
+    width: 200px ;
+   
+}
+.button {
+  background-color: orange; /* Green */
+  border: 1px;
+  color: white;
+  padding: 0px 4px;
+  text-align: center;
+  text-decoration: none;
+  display:table-row-group;
+  font-size: 14px;
+}
+.button-padding{
+    padding-top: 30px; 
+    text-align: center;
+}
+div .col-md-10 .image-logo {
+  display: block;
+  margin: 70px;
+  width: 70px;
+  background-color: rebeccapurple;
+    padding-left: 150px;
+}
+.welcome-text {
+    
+  color: white;
+  margin-top: 10px;
+  font-size: 35px;
+  text-align: center;
+  background-color:darkgreen;
+    font-family: cursive;
+    font-kerning:auto;
+}
+
+.yes{
+padding-top: 120px;
+    padding-bottom: 40px; 
+}
+
+
+.collapse{
+    background-color: #eee;
+    color: #4CAF50;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: center;
+    outline: none;
+    font-size: 15px;
+}
+.disappear {
+    
+  display: none;
+     margin-bottom: 100px;
+     
+}
+.credentials {
+  padding: 2px;
+  color: white;
+    padding-bottom: 80px; 
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+   
+   
+}
+
+td,
+th {
+  border: 2px solid orange;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: lightgreen;
+}
+@media screen and (max-width: 600px) {
+}
