@@ -14,7 +14,7 @@ function login(){
       console.log(info)
       
       
-                 fetch("http://localhost:8080/users/login", {
+                 fetch("https://issuestrackingwebapp.herokuapp.com/users/login", {
                   method: "post",
                   headers: {
                       'Accept': 'application/json',
@@ -77,7 +77,7 @@ function registerUser(){
       }
       console.log(info2)
       
-                 fetch("http://localhost:8080/users/create", {
+                 fetch("https://issuestrackingwebapp.herokuapp.com/users/create", {
                   method: "post",
                   headers: {
                       'Accept': 'application/json',
@@ -90,7 +90,7 @@ function registerUser(){
                   .then((response) => {
                     
                      window.alert(response[0])
-                    if( response[0] ==="Student record created successfully." ){
+                    if( response[0] ==="User record created successfully." ){
                         localStorage.setItem("user",JSON.stringify(info2));
                         
                         window.location="index.html"
@@ -129,7 +129,7 @@ function addEquip() {
             var name = document.getElementById('equipmentName').value;
             
           
-          fetch("http://localhost:8080/equips/read")
+          fetch("https://issuestrackingwebapp.herokuapp.com/equips/read")
               .then(response => response.json())
               .then(equips => {
                 
@@ -146,7 +146,7 @@ function addEquip() {
            
             console.log(info)
             
-                 fetch("http://localhost:8080/equips/create", {
+                 fetch("https://issuestrackingwebapp.herokuapp.com/equips/create", {
                   method: "post",
                   headers: {
                       'Accept': 'application/json',
@@ -188,7 +188,7 @@ function addIssue() {
             var month=new Date().getMonth().toString();
             var day=new Date().getDate().toString();
         
-          fetch("http://localhost:8080/issues/read")
+          fetch("https://issuestrackingwebapp.herokuapp.com/issues/read")
               .then(response => response.json())
               .then(issues => {
                  var issuesId=0;
@@ -201,7 +201,7 @@ function addIssue() {
             }
            
             console.log(info)
-                   fetch("http://localhost:8080/issues/create", {
+                   fetch("https://issuestrackingwebapp.herokuapp.com/issues/create", {
                   method: "post",
                   headers: {
                       'Accept': 'application/json',
@@ -242,7 +242,7 @@ function cancelIssuePost(){
             if(user === null){
                 logout.className="d-none"
             }
-      fetch("http://localhost:8080/equips/read")
+      fetch("https://issuestrackingwebapp.herokuapp.com/equips/read")
         .then(response => response.json())
         .then(data => {
 
@@ -268,11 +268,11 @@ function cancelIssuePost(){
 
             var equipment=[];
             
-             fetch("http://localhost:8080/equips/read")
+             fetch("https://issuestrackingwebapp.herokuapp.com/equips/read")
           .then(response => response.json())
           .then(data => {
               equipment=data;
-              fetch("http://localhost:8080/issues/read")
+              fetch("https://issuestrackingwebapp.herokuapp.com/issues/read")
               .then(response => response.json())
               .then(issues => {
 
@@ -332,7 +332,7 @@ function deleteIssue(e){
            
             console.log(info)
             
-                 fetch("http://localhost:8080/issues/delete", {
+                 fetch("https://issuestrackingwebapp.herokuapp.com/issues/delete", {
                   method: "delete",
                   headers: {
                       'Accept': 'application/json',
@@ -367,7 +367,7 @@ function updateIssue(){
                    window.alert("Only Supervisor can provide feedback.Please log in as superviser")
                  }
                  else{
-                   fetch("http://localhost:8080/issues/update", {
+                   fetch("https://issuestrackingwebapp.herokuapp.com/issues/update", {
                   method: "put",
                   headers: {
                       'Accept': 'application/json',
